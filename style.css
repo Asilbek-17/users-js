@@ -26,7 +26,7 @@ body{
 }
 
 .js-list {
-    width: 900px;
+    width: 1200px;
     margin: 0 auto;
    
 }
@@ -35,7 +35,7 @@ body{
     width: 250px;
     background-color: lightyellow;
     border-radius: 10px;
-    padding: 30px 20px;
+    padding: 10px 20px;
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
@@ -54,5 +54,26 @@ body{
 
 .btn-koz {
     margin-left: -41px;
+    border: none;
+}
+
+.btn-koz1 {
+    margin-top: -60px;
+    margin-left: -300;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.gmail-link {
+    text-decoration: none;
+}
+
+.edit-btn {
+    background: transparent;
+    border: none;
+}
+
+.delete-btn {
+    background: transparent;
     border: none;
 }

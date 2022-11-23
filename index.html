@@ -16,12 +16,15 @@
     </header>
     <main class="site-main pb-5">
         <section class="hero pt-5">
-            <ul class="js-list d-flex justify-content-between flex-wrap mt-5 list-unstyled text-center">
+            <form class="todo-form d-flex align-items-center justify-content-center" method="POST" autocomplete="off">
+                <input class="todo-text form-control w-50 me-3" type="text" name="todo_title" required>
+                <button class="btn btn-outline-success" type="submit">Send</button>
+            </form>
+            <ul class="js-list d-flex justify-content-center flex-wrap mt-5 list-unstyled text-center">
                 
             </ul>
         </section>
     </main>
-    
     
     <script src="./js/main.js"></script>
 </body>

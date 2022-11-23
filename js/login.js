@@ -1,4 +1,4 @@
-const loginToken = localStorage.getItem("token");
+const loginToken = localStorage.getItem("token-login");
 
 if(loginToken) {
     window.location.pathname = "/index.html"   
@@ -10,16 +10,17 @@ const elInpPassword = document.querySelector(".js-inp-password");
 const elBtneys = document.querySelector(".btn-koz");
 
 async function loginPost() {
+    const elInpEmailValue = elInpEmail.value;
     const elInpPasswordValue = elInpPassword.value.trim();
     try {
-        const res = await fetch("https://reqres.in/api/login", {
+        const res = await fetch("http://localhost:5001/user/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(
             {
-                email: "eve.holt@reqres.in",
+                email: elInpEmailValue,
                 password: elInpPasswordValue
             }
             )
@@ -27,7 +28,7 @@ async function loginPost() {
         
         const data = await res.json();
         if(data.token) {
-            localStorage.setItem("token", data.token);
+            localStorage.setItem("token-login", data.token);
             window.location.pathname = "/index.html";
         }
         
